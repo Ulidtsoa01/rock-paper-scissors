@@ -5,10 +5,45 @@
     <title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <!-- I am a html comment -->
+  <!-- Original: https://github.com/michalosman/rock-paper-scissors -->
   <body>
-    <h1>Homepage</h1>
-    <p></p>
+    <header class="header">
+      <h1 class="title">ROCK PAPER SCISSORS</h1>
+    </header>
+    <main class="main">
+      <div class="scoreboard">
+        <h2 class="score-info" id="scoreInfo">Choose move</h2>
+        <h3 class="score-message" id="scoreMessage">
+          First to 5 points wins
+        </h3>
+        <div class="scores-container">
+          <div class="score-box">
+            <div class="sign" id="playerSign">?</div>
+            <p class="score" id="playerScore">Player: 0</p>
+          </div>
+          <div class="score-box">
+            <div class="sign" id="computerSign">?</div>
+            <p class="score" id="computerScore">Computer: 0</p>
+          </div>
+        </div>
+      </div>
+      <div class="buttons">
+        <button class="btn btn-square" id="rockBtn">
+          <div class="sign">✊</div>
+        </button>
+        <button class="btn btn-square" id="paperBtn">
+          <div class="sign">✋</div>
+        </button>
+        <button class="btn btn-square" id="scissorsBtn">
+          <div class="sign">✌</div>
+        </button>
+      </div>
+    </main>
+    <div class="modal" id="endgameModal">
+      <p class="modal-title" id="endgameMsg"></p>
+      <button class="btn btn-restart" id="restartBtn">Play again</button>
+    </div>
+    <div class="overlay" id="overlay"></div>
     <script src="script.js"></script>
   </body>
 </html>
